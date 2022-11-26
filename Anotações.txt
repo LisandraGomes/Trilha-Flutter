@@ -1,0 +1,34 @@
+Lógica de Programação com Dart - Balta.io com o Gabul
+
+    Escrita bastante semelhante ao C# as coisas mais básicas, inicialização pela função main
+
+Tipos de Dados
+    -Bool -> Comum com os demais, não vi especificidade para o Dart. operação ternária comum do C# isFalse ? n é faz isso : é faz aquiloutiliza o simbolo de ! para o 'não', bastante semelhante ao C# o uso.
+    -Int -> Números positivos e negativos, comum também
+        **Boas práticas: se ao declarar a variavel declarar o valor também, ex: int a = 1, se usa var a = 1, porque já está sendo especificado que o a é um inteiro de setar 1, e usando o int está declarando duas vezes e não é uma boa prática.
+        já para para declarar depois, pode se usar o int a, mas ou com o ?(sinal de pode ser vazio) ou com late antes da declaração, ex: late int a, sinalizando que ela será declarada depois.
+
+        *Nas opações com inteiro, em divisão, caso queira q a divisão continue com um numero inteiro deve ser usado o '~' antes da barra, ex: 2~/5
+
+        *transformar em int -> int.parse(oq vc quer passar pra int);
+
+    -Double
+        **Transformar em Double -> double.parse(variavel); direamente, 
+            já o double.tryParse(variavel) ?? 0; para evitar erros caso tenha texto inserido na variavel, caso tenha texto vai retornar o zero.
+        
+
+    -Duration
+        *Declaração = final,ex: final variavel =  Duration(days:100);
+                -inMicroseconds, Hours, Days....
+        *Dá para fazer comparações usando o '.compareTo();'.
+
+    -DateTime
+        *Declaração: var d = DateTime(ano,mes,dia)
+
+    -Enum
+    -String
+    -List
+    -Map
+
+
+
