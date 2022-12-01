@@ -1,6 +1,7 @@
 
-import 'package:alcol_ou_gasolina/widgets/button.widget.dart';
+import 'package:alcol_ou_gasolina/widgets/sucess.widget.dart';
 import 'package:alcol_ou_gasolina/widgets/input.widget.dart';
+import 'package:alcol_ou_gasolina/widgets/loading-button.widget.dart';
 import 'package:alcol_ou_gasolina/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
@@ -38,11 +39,11 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
-          SizedBox(height: 20,),
-          
+          sucess(reset: (){}, result: "Compensa Utilizar:"),
           Input(label: "Gasolina", ctrl: _gasCtrl),    
           Input(label: "Álcool", ctrl: _alcCtrl), 
-          butao()           
+          //butao(),    
+          LoadingButton(busy: false, invert: false, func: (){}, text: "Calcular Novamente") 
         ],
       ),
     );
