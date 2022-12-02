@@ -5,12 +5,9 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class sucess extends StatelessWidget {
   var result = "";
-  Function reset;
+  final void Function()? reset;
 
-  sucess({
-    required this.reset,
-    required this.result
-  })
+  sucess({required this.reset, required this.result});
 
   @override
   Widget build(BuildContext context) {

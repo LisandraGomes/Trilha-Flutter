@@ -1,4 +1,6 @@
 
+import 'package:alcol_ou_gasolina/pages/home.pages.dart';
+import 'package:alcol_ou_gasolina/widgets/submitform-widget.dart';
 import 'package:alcol_ou_gasolina/widgets/sucess.widget.dart';
 import 'package:alcol_ou_gasolina/widgets/input.widget.dart';
 import 'package:alcol_ou_gasolina/widgets/loading-button.widget.dart';
@@ -27,25 +29,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
-  var _gasCtrl = new MoneyMaskedTextController();
-  var _alcCtrl = new MoneyMaskedTextController();
 
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(
-        children: <Widget>[
-          Logo(),
-          sucess(reset: (){}, result: "Compensa Utilizar:"),
-          Input(label: "Gasolina", ctrl: _gasCtrl),    
-          Input(label: "Álcool", ctrl: _alcCtrl), 
-          //butao(),    
-          LoadingButton(busy: false, invert: false, func: (){}, text: "Calcular Novamente") 
-        ],
-      ),
-    );
-  }
-}
